@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Scheduler Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Job Scheduler & Automation</h1>
+
+  <!-- Create Job Form -->
+  <section>
+    <h2>Create Job</h2>
+    <form id="jobForm">
+      <label>Task Name: <input type="text" id="taskName" required></label><br>
+      <label>Priority:
+        <select id="priority">
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+      </label><br>
+      <label>Payload (JSON):<br>
+        <textarea id="payload">{}</textarea>
+      </label><br>
+      <button type="submit">Create Job</button>
+    </form>
+  </section>
+
+  <!-- Filters -->
+  <section>
+    <h2>Filters</h2>
+    <select id="filterStatus">
+      <option value="">All Status</option>
+      <option value="pending">Pending</option>
+      <option value="running">Running</option>
+      <option value="completed">Completed</option>
+    </select>
+    <select id="filterPriority">
+      <option value="">All Priority</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <button onclick="loadJobs()">Apply Filters</button>
+  </section>
+
+  <!-- Jobs Table -->
+  <section>
+    <h2>Jobs</h2>
+    <table border="1" id="jobsTable">
+      <thead>
+        <tr>
+          <th>ID</th><th>Task</th><th>Priority</th><th>Status</th><th>Created</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
