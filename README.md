@@ -232,7 +232,3 @@ cd frontend
 
 ---
 
-✨ Copy this entire block into your `README.md`.  
-Then just drop your screenshots into the `/screenshots` folder and they’ll display automatically on GitHub.  
-
-Would you like me to also add a **simple ASCII flow diagram** (jobs → run → webhook → dashboard) so reviewers instantly see the workflow at a glance?
